@@ -5,12 +5,23 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Gatsby Tree-ish starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+I wanted to make Gatsby work the way I wanted it to work, which turns out to be a little non-trivial.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Specifically:
+
+* I don't want to be too wedded to a "blog" idea where it's just an about section and a single blog.  Hierarchial trees are great.
+* I want a `content` folder that contains a bunch of markdown or MDX files with frontmater
+* I don't want to have to put slugs in the file names, I just want the file name to determine the path.
+* I want to be able to generate queries for the structure of the site easily, including breadcrumbs.
+* I want to have titles for each of the pages (specified as the `title` key in the frontmatter) and I want them to be respected in the navigational elements and breadcrumbs with.
+* I want to be able to add dates with a `date` key in the frontmatter and be able to search on them.
+* I want to be able to use a `type` key in the frontmatter to select the template because MDX has some weird stuff with it's native idea of templating and it doesn't really work the way I wanted it to.
+* I also want to be able to make JSX pages that have front matter in them.  And I don't want it to be obvious how the pages.
+
+**WORK IN PROGRESS WARNING**: I'm totally not finished messing with this.
 
 ## 🚀 Quick start
 
@@ -20,7 +31,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```shell
     # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    gatsby new my-default-starter https://github.com/wirehead/gatsby-starter-wirehead-tree
     ```
 
 1.  **Start developing.**
@@ -47,6 +58,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── node_modules
     ├── src
+    ├── content
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
@@ -59,6 +71,8 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     └── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+2.  **`/content`**: This directory contains the mainline content of your site, structured as markdown.  There's a set of samples here
 
 2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
@@ -92,8 +106,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wirehead/gatsby-starter-wirehead-tree)
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/wirehead/gatsby-starter-wirehead-tree)
 
 <!-- AUTO-GENERATED-CONTENT:END -->

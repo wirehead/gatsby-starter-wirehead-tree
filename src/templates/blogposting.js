@@ -29,6 +29,9 @@ export default function PageTemplate({ data, location, pageContext }) {
         description={pageContext.excerpt} />
     <h1>{pageContext.title}</h1>
     <MDXRenderer pages={allSitePage}>{body}</MDXRenderer>
+    <br />Posted: {pageContext.date}
+    <hr />
+    {pages}
     </Layout>
   )
 }

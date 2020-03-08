@@ -25,10 +25,10 @@ const IndexPage = ({
   })
 
   return (<Layout>
-    <SEO title="Home" />
+    <SEO title={pageContext.title} />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <p>Note that this page has front matter configured to set the title and the update section below is going to show everything that's changed across the whole site.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
@@ -70,5 +70,5 @@ export const pageQuery = graphql`
 
 
 export const frontmatter = {
-  title: "Indx page",
+  title: "Index page",
 }

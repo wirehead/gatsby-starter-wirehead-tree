@@ -29,6 +29,7 @@ export default function PageTemplate({ data, location, pageContext }) {
         description={pageContext.excerpt} />
     <h1>{pageContext.title}</h1>
     <MDXRenderer pages={allSitePage}>{body}</MDXRenderer>
+    {pages}
     </Layout>
   )
 }
