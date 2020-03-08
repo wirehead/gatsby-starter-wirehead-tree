@@ -1,3 +1,6 @@
+const path = require(`path`)
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -5,6 +8,14 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-transformer-javascript-frontmatter`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "javascript-pages",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,8 +24,39 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+          },
+          {
+            resolve: "gatsby-remark-smartypants",
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-theme-wirehead-tree`,
+      options: {
+        postType : path.resolve(`src/templates/post.js`),
+        componentMap : {
+          "BlogPosting": path.resolve(`src/templates/blogposting.js`),
+        },
+        extraTitles: {}
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
