@@ -17,7 +17,7 @@
     "gatsby-remark-images": "^3.1.46",
     "gatsby-remark-smartypants": "^2.1.22",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-theme-wirehead-tree": "0.0.1",
+    "gatsby-theme-wirehead-tree": "0.0.2",
     "gatsby-transformer-javascript-frontmatter": "^2.1.25",
     "gatsby-transformer-sharp": "^2.3.13",
     "prop-types": "^15.7.2",
